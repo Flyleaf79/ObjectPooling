@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour {
 
-    public GameObject prefab;
+	public GameObject prefab;
 
 	void Start ()
-    {
-        PoolManager.instance.CreatePool(prefab, 3);
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PoolManager.instance.ReuseObject(prefab, Vector3.zero, Quaternion.identity);
-        }
+	{
+		PoolManager.instance.CreatePool(prefab, 3);
+	}
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			PoolManager.instance.ReuseObject(prefab, Vector3.zero, Quaternion.identity);
+		}
 	}
 }

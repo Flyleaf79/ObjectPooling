@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class TestObject : PoolObject {
 
+    static int id = 1;
+
+    void Start()
+    {
+        GameObject child = null;
+        child = transform.GetChild(0).gameObject;
+
+        var  childTextMesh = child.GetComponent<TextMesh>();
+        childTextMesh.text = id.ToString();
+        id++;
+    }
+
     void Update()
     {
         transform.localScale += Vector3.one * Time.deltaTime * 3;

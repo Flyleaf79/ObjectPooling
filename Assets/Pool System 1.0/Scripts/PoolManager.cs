@@ -13,7 +13,6 @@ public class PoolManager : MonoBehaviour {
     // An easy way to access the following methods using the Singleton Pattern
     static PoolManager _instance;
 
-    // Accessor
     public static PoolManager instance
     {
         get
